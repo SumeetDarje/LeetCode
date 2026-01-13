@@ -1,0 +1,26 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+		
+		String value=s.toLowerCase().trim();
+        String ans="";
+        for(int i=0;i<=value.length()-1;i++){
+            if(value.charAt(i)>=97 && value.charAt(i)<=122 || value.charAt(i)>=48 && value.charAt(i)<=57){
+                ans+=value.charAt(i);
+            }
+        }
+        System.out.println(ans);
+        
+		boolean flag= false;
+        
+        String rev="";
+        for(int i=ans.length()-1;i>=0;i--) {
+        	rev += ans.charAt(i);
+        }
+        if(ans.compareTo(rev)==0) {
+        	return true;
+        }else {
+        	return false;
+        }
+
+    }
+}
