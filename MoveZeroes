@@ -1,6 +1,6 @@
 class Solution {
     public void moveZeroes(int[] nums) {
-        int index=0;
+              int index=0;
         int temp[]=new int[nums.length];
 
         for(int x: nums){
@@ -10,5 +10,8 @@ class Solution {
             }
         }
         System.arraycopy(temp,0,nums,0,nums.length);
+        //to optimize memory
+        temp=null;
+        System.gc();
     }
 }
